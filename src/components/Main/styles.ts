@@ -5,7 +5,7 @@ export const Wrapper = styled.main`
     background-color: ${theme.colors.mainBg};
     color: ${theme.colors.white};
     width: 100%;
-    height: 100%;
+    height: 100vh;
     text-align: center;
     padding: ${theme.spacings.medium};
     display: flex;
