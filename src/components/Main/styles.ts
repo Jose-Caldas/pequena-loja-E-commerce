@@ -1,29 +1,37 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.main`
-  background-color: #06092b;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  padding: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${({ theme }) => css`
+    background-color: ${theme.colors.mainBg};
+    color: ${theme.colors.white};
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: ${theme.spacings.medium};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `}
 `;
 
 export const Logo = styled.img`
-  width: 25rem;
-  margin-bottom: 2rem;
+  ${({ theme }) => css`
+    width: 25rem;
+    margin-bottom: ${theme.spacings.small};
+  `}
 `;
 
 export const Title = styled.h1`
-  font: 2.5rem;
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xxlarge};
+  `}
 `;
 
 export const Description = styled.h2`
-  font-size: 2rem;
-  font-weight: 400;
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xlarge};
+    font-weight: 400;
+  `}
 `;
 
 export const Illustration = styled.img`
