@@ -13,6 +13,7 @@ export default function Main({
           alt="logo-Atomo e ao lado escrito react avançado"
         />
         <Title>{title}</Title>
+
         <Description>{description}</Description>
         <Illustration
           src="/hero-illustration.svg"
