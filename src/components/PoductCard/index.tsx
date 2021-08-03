@@ -4,17 +4,17 @@ import Heading from "../Heading";
 import * as S from "./styles";
 
 export type ProductCardProps = {
-  title: string;
+  name: string;
   price: string;
   image: string;
   slug: string;
 };
 
-const ProductCard = ({ title, price, image, slug }: ProductCardProps) => (
+const ProductCard = ({ name, price, image, slug }: ProductCardProps) => (
   <S.Wrapper>
     <Link href={`/product/${slug}`} passHref>
       <S.ImageBox>
-        <img src={image} alt={title} />
+        <img src={image} alt={name} />
       </S.ImageBox>
     </Link>
 
@@ -23,7 +23,7 @@ const ProductCard = ({ title, price, image, slug }: ProductCardProps) => (
         <S.GameInfo>
           <S.Title>
             <Heading lineBottom color="black">
-              {title}
+              {name}
             </Heading>
           </S.Title>
         </S.GameInfo>

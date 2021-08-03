@@ -5,7 +5,7 @@ import { Wrapper } from "./styles";
 const Header = () => (
   <Wrapper>
     <h2>Home</h2>
-    <Heading lineBottom>Store</Heading>
+    <Heading lineLeft>Products</Heading>
     <ShoppingCart size={20} />
   </Wrapper>
 );

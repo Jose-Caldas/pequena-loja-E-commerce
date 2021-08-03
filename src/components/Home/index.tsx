@@ -1,7 +1,7 @@
 import { Wrapper, Title, Logo, Description, Illustration } from "./styles";
 import {} from "@storybook/react";
 
-export default function Main({
+export default function Home({
   title = "React avançado",
   description = "TypeScript, ReactJS, NextJS e Styled-Components",
 }) {
