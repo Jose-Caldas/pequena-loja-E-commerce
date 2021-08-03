@@ -1,17 +1,12 @@
-import styled from "styled-components";
-import media from "styled-media-query";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: 25rem 1fr;
-  margin-left: auto;
-  margin-right: auto;
-
-  padding: 6rem;
-
-  ${media.lessThan("medium")`
-  grid-template-columns: 1fr;
-   padding: 2rem;
+  ${({ theme }) => css`
+    width: 100%;
+    max-width: ${theme.grid.container};
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(${theme.grid.gutter} / 2);
+    padding-right: calc(${theme.grid.gutter} / 2);
   `}
 `;
