@@ -7,5 +7,11 @@ export const Wrapper = styled.header`
     justify-content: space-between;
     color: ${theme.colors.white};
     padding-top: ${theme.spacings.small};
+
+    a {
+      text-decoration: none;
+      color: ${theme.colors.white};
+      font-size: ${theme.font.sizes.xlarge};
+    }
   `}
 `;

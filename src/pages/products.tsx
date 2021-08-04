@@ -3,23 +3,26 @@ import { Container } from "../components/Container";
 import SideBar from "../components/SideBar";
 import * as S from "../styles/pages/products.styles";
 import { Grid } from "../components/Grid";
-import ProductCard from "../components/PoductCard";
-import { gql, useQuery } from "@apollo/client";
+import ProductCard from "../components/ProductCard";
+import { useQuery } from "@apollo/client";
 import { initializeApollo } from "../utils/aplollo";
 import { GetProducts } from "../graphql/generated/GetProducts";
 import { QUERY_PRODUCTS } from "../graphql/queries/products";
+import MediaMatch from "../components/MediaMatch";
+import Heading from "../components/Heading";
 
 export default function Products() {
   const { data } = useQuery<GetProducts>(QUERY_PRODUCTS);
-
-  console.log(data);
 
   return (
     <Container>
       <Base>
         <S.Main>
-          <SideBar />
+          <MediaMatch greaterThan="medium">
+            <SideBar />
+          </MediaMatch>
           <section>
+            <Heading lineLeft>Products</Heading>
             <Grid>
               {data?.products.map((product) => (
                 <ProductCard
@@ -41,7 +44,9 @@ export default function Products() {
 export async function getServerSideProps() {
   const apollloClient = initializeApollo();
 
-  const { data } = await apollloClient.query({ query: QUERY_PRODUCTS });
+  const { data } = await apollloClient.query<GetProducts>({
+    query: QUERY_PRODUCTS,
+  });
   return {
     props: {
       data: data,

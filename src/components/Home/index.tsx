@@ -1,5 +1,7 @@
 import { Wrapper, Title, Logo, Description, Illustration } from "./styles";
 import {} from "@storybook/react";
+import SideBar from "../SideBar";
+import { Container } from "../Container";
 
 export default function Home({
   title = "React avançado",
