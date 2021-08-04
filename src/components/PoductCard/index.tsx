@@ -5,7 +5,7 @@ import * as S from "./styles";
 
 export type ProductCardProps = {
   name: string;
-  price: string;
+  price: number;
   image: string;
   slug: string;
 };
