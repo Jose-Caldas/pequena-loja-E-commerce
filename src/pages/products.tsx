@@ -22,7 +22,9 @@ export default function Products() {
             <SideBar />
           </MediaMatch>
           <section>
-            <Heading lineLeft>Products</Heading>
+            <Heading lineLeft lineColor="primary" size="medium">
+              Products
+            </Heading>
             <Grid>
               {data?.products.map((product) => (
                 <ProductCard

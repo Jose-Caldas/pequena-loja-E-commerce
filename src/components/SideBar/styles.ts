@@ -8,33 +8,18 @@ export const Wrapper = styled.div`
       color: ${theme.colors.white};
       margin-bottom: ${theme.spacings.large};
       text-decoration: none;
+      &:hover {
+        color: ${theme.colors.primary};
+        transform: ${theme.transition.default};
+        
+      }
 
       h2 {
         margin-left: 2rem;
         position: relative;
 
-        &:hover {
-          &::after {
-            content: "";
-            position: absolute;
-            display: block;
-            height: 0.3rem;
-            background-color: ${theme.colors.primary};
-            animation: hoverAnimation 0.2s forwards;
-          }
-          @keyframes hoverAnimation {
-            from {
-              width: 0;
-              left: 50%;
-            }
-            to {
-              width: 100%;
-              left: 0;
-            }
-          }
-        }
-      }
-    }
+        &:hover {}
+       
   `}
 `;
 

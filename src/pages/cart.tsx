@@ -1,4 +1,5 @@
 import Base from "../components/Base";
+import CartList from "../components/CartList";
 import { Container } from "../components/Container";
 import { Grid } from "../components/Grid";
 import Heading from "../components/Heading";
@@ -16,7 +17,9 @@ export default function Cart() {
           </MediaMatch>
           <section>
             <Heading lineLeft>Cart</Heading>
-            <Grid>Produtos Cart</Grid>
+            <Grid>
+              <CartList />
+            </Grid>
           </section>
         </S.Wrapper>
       </Base>
