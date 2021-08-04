@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.menu<MenuFullProps>`
-  ${({ theme }) => css`
+  ${({ theme, isOpen }) => css`
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: ${theme.spacings.small} 0;
     position: relative;
+    z-index: ${isOpen ? theme.layers.menu : `calc(${theme.layers.menu} - 1)`};
   `}
 `;
 
