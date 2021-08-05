@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { darken } from "polished";
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -9,7 +10,7 @@ export const Wrapper = styled.div`
       margin-bottom: ${theme.spacings.large};
       text-decoration: none;
       &:hover {
-        color: ${theme.colors.primary};
+        color: ${darken(0.2, theme.colors.primary)};
         transform: ${theme.transition.default};
         
       }

@@ -26,7 +26,7 @@ const Payment = () => {
         </S.CardsList>
       </S.Body>
       <S.Footer>
-        <Button as="a" fullWidth>
+        <Button as="a" fullWidth minimal>
           Continue shopping
         </Button>
         <Button fullWidth icon={<ShoppingCart />}>

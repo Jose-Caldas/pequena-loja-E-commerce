@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { darken } from "polished";
 
 export const Wrapper = styled.menu<MenuFullProps>`
   ${({ theme, isOpen }) => css`
@@ -29,7 +30,7 @@ export const LinkWrapper = styled.div`
       text-decoration: none;
 
       &:hover:first-child {
-        color: ${theme.colors.primary};
+        color: ${darken(0.2, theme.colors.primary)};
       }
     }
   `}
