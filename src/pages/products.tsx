@@ -33,6 +33,7 @@ export default function Products() {
             <Grid>
               {data?.products.map((product) => (
                 <ProductCard
+                  id={product.id}
                   key={product.slug}
                   name={product.name}
                   price={product.price}

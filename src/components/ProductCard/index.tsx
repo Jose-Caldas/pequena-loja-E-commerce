@@ -1,19 +1,19 @@
 import Link from "next/link";
 import { formatPrice } from "../../utils/formatPrice";
-import Button from "../Button";
 import Heading from "../Heading";
-import { AddShoppingCart } from "@styled-icons/material-outlined/AddShoppingCart";
 
 import * as S from "./styles";
+import CartButton from "../CartButton";
 
 export type ProductCardProps = {
+  id: string;
   name: string;
   price: number;
   image: string;
   slug: string;
 };
 
-const ProductCard = ({ name, price, image, slug }: ProductCardProps) => (
+const ProductCard = ({ name, price, image, slug, id }: ProductCardProps) => (
   <S.Wrapper>
     <Link href={`/product/${slug}`} passHref>
       <S.ImageBox>
@@ -34,9 +34,7 @@ const ProductCard = ({ name, price, image, slug }: ProductCardProps) => (
 
       <S.BuyBox>
         <S.Price>{formatPrice(price)}</S.Price>
-        <Button size="small" icon={<AddShoppingCart />}>
-          Buy now
-        </Button>
+        <CartButton hasText id={id} />
       </S.BuyBox>
     </S.Content>
   </S.Wrapper>

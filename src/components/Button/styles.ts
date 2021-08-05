@@ -1,7 +1,7 @@
 import styled, { css, DefaultTheme } from "styled-components";
 import { ButtonProps } from ".";
 
-type WrapperProps = {
+type wrapperProps = {
   hasIcon: boolean;
 } & Pick<ButtonProps, "size" | "fullWidth">;
 
@@ -33,7 +33,7 @@ const wrapperModifiers = {
   `,
 };
 
-export const Wrapper = styled.button<WrapperProps>`
+export const Wrapper = styled.button<wrapperProps>`
   ${({ theme, size, fullWidth, hasIcon }) => css`
     background: linear-gradient(180deg, #ff5f5f 0%, #f062c0 50%);
     color: ${theme.colors.white};
