@@ -10,7 +10,7 @@ export const productsMapper = (
         name: product.name,
         slug: product.slug,
         image: `http://localhost:1337${product.image?.url}`,
-        price: product.price,
+        price: formatPrice(product.price),
       }))
     : [];
 };

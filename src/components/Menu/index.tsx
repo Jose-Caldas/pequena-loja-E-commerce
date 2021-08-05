@@ -1,11 +1,11 @@
 import { Menu2 as MenuIcon } from "@styled-icons/remix-fill/Menu2";
-import { ShoppingCart as ShoppingCartIcon } from "@styled-icons/material-outlined/ShoppingCart";
 import { Close as CloseIcon } from "@styled-icons/material-outlined/Close";
 
 import * as S from "./styles";
 import Link from "next/link";
 import { useState } from "react";
 import MediaMatch from "../MediaMatch";
+import CartIcon from "../CartIcon";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ const Menu = () => {
       <S.LinkWrapper>
         <Link href="/cart">
           <a>
-            <ShoppingCartIcon aria-label="Open Shopping Cart" size={30} />
+            <CartIcon />
           </a>
         </Link>
       </S.LinkWrapper>
