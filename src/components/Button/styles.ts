@@ -1,7 +1,7 @@
 import styled, { css, DefaultTheme } from "styled-components";
 import { ButtonProps } from ".";
 
-type wrapperProps = {
+export type wrapperProps = {
   hasIcon: boolean;
 } & Pick<ButtonProps, "size" | "fullWidth">;
 

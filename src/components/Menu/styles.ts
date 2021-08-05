@@ -27,25 +27,9 @@ export const LinkWrapper = styled.div`
       cursor: pointer;
       font-size: ${theme.font.sizes.xlarge};
       text-decoration: none;
-    }
-    &:hover {
-      &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        height: 0.3rem;
-        background-color: ${theme.colors.primary};
-        animation: hoverAnimation 0.2s forwards;
-      }
-      @keyframes hoverAnimation {
-        from {
-          width: 0;
-          left: 50%;
-        }
-        to {
-          width: 100%;
-          left: 0;
-        }
+
+      &:hover {
+        color: ${theme.colors.primary};
       }
     }
   `}

@@ -18,6 +18,7 @@ export default function Cart() {
             <Heading lineLeft>Cart</Heading>
             <S.Content>
               <CartList />
+              <Heading color="white">Payment</Heading>
             </S.Content>
           </section>
         </S.Wrapper>

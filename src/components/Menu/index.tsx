@@ -5,7 +5,7 @@ import * as S from "./styles";
 import Link from "next/link";
 import { useState } from "react";
 import MediaMatch from "../MediaMatch";
-import CartIcon from "../CartIcon";
+import CartDropdown from "../CartDropdown";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,11 +24,9 @@ const Menu = () => {
       </S.LinkWrapper>
 
       <S.LinkWrapper>
-        <Link href="/cart">
-          <a>
-            <CartIcon />
-          </a>
-        </Link>
+        <a>
+          <CartDropdown />
+        </a>
       </S.LinkWrapper>
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
