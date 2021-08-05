@@ -2,6 +2,8 @@ import Link from "next/link";
 import { formatPrice } from "../../utils/formatPrice";
 import Button from "../Button";
 import Heading from "../Heading";
+import { AddShoppingCart } from "@styled-icons/material-outlined/AddShoppingCart";
+
 import * as S from "./styles";
 
 export type ProductCardProps = {
@@ -32,7 +34,9 @@ const ProductCard = ({ name, price, image, slug }: ProductCardProps) => (
 
       <S.BuyBox>
         <S.Price>{formatPrice(price)}</S.Price>
-        <Button size="small">Buy now</Button>
+        <Button size="small" icon={<AddShoppingCart />}>
+          Buy now
+        </Button>
       </S.BuyBox>
     </S.Content>
   </S.Wrapper>

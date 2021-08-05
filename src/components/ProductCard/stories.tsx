@@ -7,10 +7,10 @@ export default {
   component: ProductCard,
   args: {
     slug: "Sandal-1",
-    title: "Sandal",
+    name: "Sandal",
 
-    image: "img/sandalia300.png",
-    price: "R$ 240,00",
+    image: "img/sapatofem300.png",
+    price: 240,
   },
 } as Meta;
 
