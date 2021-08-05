@@ -6,13 +6,18 @@ import { Grid } from "../components/Grid";
 import ProductCard from "../components/ProductCard";
 import { useQuery } from "@apollo/client";
 import { initializeApollo } from "../utils/aplollo";
-import { GetProducts } from "../graphql/generated/GetProducts";
+import {
+  QueryProducts,
+  QueryProductsVariables,
+} from "../graphql/generated/QueryProducts";
 import { QUERY_PRODUCTS } from "../graphql/queries/products";
 import MediaMatch from "../components/MediaMatch";
 import Heading from "../components/Heading";
 
 export default function Products() {
-  const { data } = useQuery<GetProducts>(QUERY_PRODUCTS);
+  const { data } = useQuery<QueryProducts, QueryProductsVariables>(
+    QUERY_PRODUCTS
+  );
 
   return (
     <Container>
@@ -46,7 +51,10 @@ export default function Products() {
 export async function getServerSideProps() {
   const apollloClient = initializeApollo();
 
-  const { data } = await apollloClient.query<GetProducts>({
+  const { data } = await apollloClient.query<
+    QueryProducts,
+    QueryProductsVariables
+  >({
     query: QUERY_PRODUCTS,
   });
   return {

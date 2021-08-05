@@ -4,22 +4,27 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: GetProducts
+// GraphQL query operation: QueryProducts
 // ====================================================
 
-export interface GetProducts_products_image {
+export interface QueryProducts_products_image {
   __typename: "UploadFile";
   url: string;
 }
 
-export interface GetProducts_products {
+export interface QueryProducts_products {
   __typename: "Products";
+  id: string;
   name: string;
   price: number;
   slug: string;
-  image: GetProducts_products_image | null;
+  image: QueryProducts_products_image | null;
 }
 
-export interface GetProducts {
-  products: GetProducts_products[];
+export interface QueryProducts {
+  products: QueryProducts_products[];
+}
+
+export interface QueryProductsVariables {
+  id?: string[] | null;
 }

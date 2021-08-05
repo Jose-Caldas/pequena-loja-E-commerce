@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { formatPrice } from "../../utils/formatPrice";
 import Button from "../Button";
 import Heading from "../Heading";
 import * as S from "./styles";
@@ -30,7 +31,7 @@ const ProductCard = ({ name, price, image, slug }: ProductCardProps) => (
       </Link>
 
       <S.BuyBox>
-        <S.Price>{price}</S.Price>
+        <S.Price>{formatPrice(price)}</S.Price>
         <Button size="small">Buy now</Button>
       </S.BuyBox>
     </S.Content>
