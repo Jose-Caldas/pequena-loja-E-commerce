@@ -28,7 +28,7 @@ export const LinkWrapper = styled.div`
       font-size: ${theme.font.sizes.xlarge};
       text-decoration: none;
 
-      &:hover {
+      &:hover:first-child {
         color: ${theme.colors.primary};
       }
     }

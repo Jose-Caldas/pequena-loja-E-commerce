@@ -3,6 +3,8 @@ import CartList from "../components/CartList";
 import { Container } from "../components/Container";
 import Heading from "../components/Heading";
 import MediaMatch from "../components/MediaMatch";
+import PaymentOptions from "../components/Payment";
+
 import SideBar from "../components/SideBar";
 import * as S from "../styles/pages/cart.styles";
 
@@ -18,7 +20,7 @@ export default function Cart() {
             <Heading lineLeft>Cart</Heading>
             <S.Content>
               <CartList />
-              <Heading color="white">Payment</Heading>
+              <PaymentOptions />
             </S.Content>
           </section>
         </S.Wrapper>

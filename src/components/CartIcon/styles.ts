@@ -6,6 +6,10 @@ export const Wrapper = styled.div`
     width: 2.4rem;
     height: 2.4rem;
     position: relative;
+
+    svg:hover {
+      color: ${theme.colors.primary};
+    }
   `}
 `;
 

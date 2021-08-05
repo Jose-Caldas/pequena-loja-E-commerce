@@ -8,7 +8,7 @@ export type wrapperProps = {
 const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
     height: 3rem;
-    font-size: ${theme.font.sizes.xsmall};
+    font-size: ${theme.font.sizes.small};
   `,
   medium: (theme: DefaultTheme) => css`
     height: 4rem;
