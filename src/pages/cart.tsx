@@ -1,7 +1,6 @@
 import Base from "../components/Base";
 import CartList from "../components/CartList";
 import { Container } from "../components/Container";
-import { Grid } from "../components/Grid";
 import Heading from "../components/Heading";
 import MediaMatch from "../components/MediaMatch";
 import SideBar from "../components/SideBar";
@@ -17,9 +16,9 @@ export default function Cart() {
           </MediaMatch>
           <section>
             <Heading lineLeft>Cart</Heading>
-            <Grid>
+            <S.Content>
               <CartList />
-            </Grid>
+            </S.Content>
           </section>
         </S.Wrapper>
       </Base>

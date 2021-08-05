@@ -70,7 +70,7 @@ export const Price = styled.div`
     height: 3rem;
     align-items: center;
     color: ${theme.colors.white};
-    background-color: ${theme.colors.secondary};
+    background-color: ${theme.colors.darkGray};
     padding: ${theme.spacings.xxsmall} ${theme.spacings.large};
     border-radius: ${theme.border.radius};
   `}

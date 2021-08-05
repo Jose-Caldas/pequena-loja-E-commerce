@@ -9,4 +9,6 @@ export const Wrapper = styled(Container)`
         gap: ${theme.grid.gutter};`}
   `}
 `;
-export const Content = styled.main``;
+export const Content = styled.main`
+  margin-top: 2rem;
+`;
