@@ -1,19 +1,26 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { Container } from "../Container";
 import Menu from "../Menu";
-import * as S from "./styles";
+import SideBar from "../SideBar";
+import { Wrapper, Section } from "../../styles/pages/base.styles";
+import MediaMatch from "../MediaMatch";
 
-export type BaseProps = {
+export type OrderProps = {
   children: ReactNode;
 };
 
-const Base = ({ children }: BaseProps) => (
-  <S.Wrapper>
+function Base({ children }: OrderProps) {
+  return (
     <Container>
       <Menu />
+      <Wrapper>
+        <MediaMatch greaterThan="medium">
+          <SideBar />
+        </MediaMatch>
+        <Section>{children}</Section>
+      </Wrapper>
     </Container>
-    <S.Content>{children}</S.Content>
-  </S.Wrapper>
-);
+  );
+}
 
 export default Base;

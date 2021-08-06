@@ -89,6 +89,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     height: 100vh;
     overflow: hidden;
     pointer-events: ${isOpen ? "all" : "none"};
+    z-index: ${theme.layers.alwaysOnTop};
 
     > svg {
       position: absolute;

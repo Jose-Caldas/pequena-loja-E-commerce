@@ -1,6 +1,6 @@
 const theme = {
   grid: {
-    container: "160rem",
+    container: "180rem",
     gutter: "3.2rem",
   },
   border: {

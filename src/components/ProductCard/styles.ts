@@ -10,6 +10,11 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     background-color: ${theme.colors.white};
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.4);
+    }
   `}
 `;
 export const ImageBox = styled.a`
