@@ -24,11 +24,11 @@ const CartList = ({ hasButton = false }: CartListProps) => {
     <S.Wrapper isEmpty={!items.length} data-cy="cart-list">
       {items.length ? (
         <>
-          <S.GamesList>
+          <S.ProductsList>
             {items.map((item) => (
               <ProductItem key={item.name} {...item} />
             ))}
-          </S.GamesList>
+          </S.ProductsList>
 
           <S.Footer>
             {!hasButton && <span>Total:</span>}

@@ -47,7 +47,7 @@ export const Loading = styled.div`
   `}
 `;
 
-export const GamesList = styled.div`
+export const ProductsList = styled.div`
   max-height: 50rem;
   overflow-y: auto;
 `;
