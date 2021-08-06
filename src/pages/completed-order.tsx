@@ -1,15 +1,33 @@
 import Heading from "../components/Heading";
-import { Wrapper, Content } from "../styles/pages/completedOrder.styles";
+import { useCart } from "../hooks/use-cart";
+import * as S from "../styles/pages/completedOrder.styles";
 
 export default function CompleteOrder() {
+  const { items, total } = useCart();
   return (
-    <Wrapper>
+    <S.Wrapper>
       <img src="/img/confetti.png" alt="" />
-      <Content>
-        <Heading color="black" lineLeft lineColor="primary">
-          Your order was completed successfully
+      <S.Content>
+        <Heading color="black" lineLeft lineColor="secondary" size="huge">
+          Your order was completed successfully.
         </Heading>
-      </Content>
-    </Wrapper>
+        <S.Box>
+          {items.length &&
+            items.map((item) => (
+              <S.Item key={item.id}>
+                <Heading color="black" size="medium">
+                  {item.name}
+                </Heading>
+                <Heading color="black" size="small">
+                  {item.price}
+                </Heading>
+              </S.Item>
+            ))}
+          <footer>
+            <Heading color="white">Total: {total}</Heading>
+          </footer>
+        </S.Box>
+      </S.Content>
+    </S.Wrapper>
   );
 }

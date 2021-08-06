@@ -14,6 +14,12 @@ export const Wrapper = styled.div`
 `;
 export const Container = styled.div`
   display: flex;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+
+  &:hover {
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.4);
+  }
 `;
 export const Content = styled.div`
   display: flex;

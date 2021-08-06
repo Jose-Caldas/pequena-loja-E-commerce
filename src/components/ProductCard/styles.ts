@@ -58,13 +58,13 @@ export const BuyBox = styled.div`
     margin-top: ${theme.spacings.xxsmall};
 
     span {
-      /* background-color: ${theme.colors.secondary}; */
       color: ${theme.colors.white};
       padding: 0.6rem ${theme.spacings.xsmall};
       font-weight: ${theme.font.bold};
 
       border: none;
       border-radius: ${theme.border.radius};
+      font-size: ${theme.font.sizes.small};
     }
   `}
 `;

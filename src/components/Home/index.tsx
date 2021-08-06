@@ -1,27 +1,21 @@
-import { Wrapper, Title, Logo, Description, Illustration } from "./styles";
+import { Wrapper, Illustration, Header } from "./styles";
 import {} from "@storybook/react";
-import SideBar from "../SideBar";
 import { Container } from "../Container";
+import SideBar from "../SideBar";
+import Heading from "../Heading";
 
-export default function Home({
-  title = "React avançado",
-  description = "TypeScript, ReactJS, NextJS e Styled-Components",
-}) {
+export default function Home() {
   return (
-    <Wrapper>
-      <main>
-        <Logo
-          src="/logo.svg"
-          alt="logo-Atomo e ao lado escrito react avançado"
-        />
-        <Title>{title}</Title>
-
-        <Description>{description}</Description>
-        <Illustration
-          src="/hero-illustration.svg"
-          alt="figura de um desenvolvedor e uma tela com códigos"
-        />
-      </main>
-    </Wrapper>
+    <Container>
+      <Header>
+        <Heading lineBottom lineColor="primary" size="huge">
+          Wellcome to the Store!!
+        </Heading>
+      </Header>
+      <Wrapper>
+        <SideBar />
+        <Illustration src="/hero-illustration.svg" />
+      </Wrapper>
+    </Container>
   );
 }
