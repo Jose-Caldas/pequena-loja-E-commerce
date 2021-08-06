@@ -3,6 +3,7 @@ import Radio from "../Radio";
 import * as S from "./styles";
 import { Add, ShoppingCart } from "@styled-icons/material-outlined";
 import Button from "../Button";
+import Link from "next/link";
 
 const Payment = () => {
   return (
@@ -26,12 +27,16 @@ const Payment = () => {
         </S.CardsList>
       </S.Body>
       <S.Footer>
-        <Button as="a" fullWidth minimal>
-          Continue shopping
-        </Button>
-        <Button fullWidth icon={<ShoppingCart />}>
-          Buy now
-        </Button>
+        <Link href="/products" passHref>
+          <Button as="a" fullWidth minimal>
+            Continue shopping
+          </Button>
+        </Link>
+        <Link href="/orders" passHref>
+          <Button fullWidth icon={<ShoppingCart />}>
+            Buy now
+          </Button>
+        </Link>
       </S.Footer>
     </S.Wrapper>
   );

@@ -16,20 +16,19 @@ export const Wrapper = styled.div`
   `}
 `;
 
-export const Orders = styled.div``;
+export const Orders = styled.div`
+  overflow-y: auto;
+`;
 export const Payment = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
-  /* background-color: gray; */
 `;
 
 export const Section = styled.div`
   display: flex;
   flex-direction: column;
-  /* margin-top: 6rem; */
-  /* margin-bottom: 6rem; */
 
   p {
     margin-right: 2rem;
@@ -48,6 +47,4 @@ export const Box = styled.div`
   width: 100%;
   `}
 `;
-export const Card = styled.div`
-  /* margin-top: 1rem; */
-`;
+export const Card = styled.div``;
