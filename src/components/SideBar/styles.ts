@@ -9,15 +9,17 @@ export const Wrapper = styled.div`
       color: ${theme.colors.white};
       margin-bottom: ${theme.spacings.large};
       text-decoration: none;
+      font-size:${theme.font.sizes.xxlarge};
+      font-weight: bold;
       &:hover {
         color: ${darken(0.2, theme.colors.primary)};
         transform: ${theme.transition.default};
         
       }
 
-      h2 {
-        margin-left: 2rem;
-        position: relative;
+      svg {
+        margin-right: 2rem;
+        width: ${theme.font.sizes.xxlarge};
 
         &:hover {}
        

@@ -15,7 +15,7 @@ const CartList = ({ hasButton = false }: CartListProps) => {
   if (loading) {
     return (
       <S.Loading>
-        <p>Loading...</p>
+        <img src="img/dots.svg" alt="Loading more ..." />
       </S.Loading>
     );
   }

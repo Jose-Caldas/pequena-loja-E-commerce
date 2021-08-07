@@ -10,20 +10,20 @@ const SideBar = () => {
       <S.Container>
         <Link href="/products" passHref>
           <a>
-            <Dropbox size={20} />
-            <h2>Products</h2>
+            <Dropbox />
+            Products
           </a>
         </Link>
         <Link href="/orders" passHref>
           <a>
-            <FactCheck size={20} />
-            <h2>Orders</h2>
+            <FactCheck />
+            Orders
           </a>
         </Link>
         <Link href="cart" passHref>
           <a>
-            <ShoppingCart size={20} />
-            <h2>Cart</h2>
+            <ShoppingCart />
+            Cart
           </a>
         </Link>
       </S.Container>

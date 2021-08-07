@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 5rem;
 `;
 
 export const Image = styled.img`
@@ -15,11 +16,12 @@ export const Title = styled.h2`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
     font-size: ${theme.font.sizes.xxlarge};
+    margin-bottom: ${theme.spacings.small};
   `}
 `;
 export const Description = styled.p`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.black};
     font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.light};
     margin-bottom: ${theme.spacings.medium};

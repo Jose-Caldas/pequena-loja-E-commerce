@@ -2,15 +2,12 @@ import { tint } from "polished";
 import styled, { css, DefaultTheme } from "styled-components";
 import * as ButtonStyles from "../Button/styles";
 
-export const Wrapper = styled.main`
-  ${({ theme }) => css`
-    background: ${theme.colors.white};
-  `}
-`;
+export const Wrapper = styled.main``;
 
 export const Body = styled.div`
   ${({ theme }) => css`
     padding: ${theme.spacings.small};
+    background: ${theme.colors.white};
   `}
 `;
 export const Footer = styled.div`
@@ -62,16 +59,6 @@ export const CardInfo = styled.span`
 
     img {
       margin-right: ${theme.spacings.xxsmall};
-    }
-  `}
-`;
-export const AddCard = styled.div`
-  ${({ theme }) => css`
-    ${ItemStyles(theme)};
-    svg {
-      margin-left: ${theme.spacings.xxsmall};
-      margin-right: ${theme.spacings.xsmall};
-      width: 2.4rem;
     }
   `}
 `;

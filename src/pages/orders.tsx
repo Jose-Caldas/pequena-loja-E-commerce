@@ -6,9 +6,12 @@ import Heading from "../components/Heading";
 import ProductItem from "../components/ProductItem";
 import { useCart } from "../hooks/use-cart";
 import * as S from "../styles/pages/orders.styles";
+import cardsMock from "../components/Payment/mock";
+
+const cards = cardsMock;
 
 export default function Orders() {
-  const { items, total } = useCart();
+  const { items, total, clearCart } = useCart();
   return (
     <Base>
       <Heading color="black" lineLeft>
@@ -33,12 +36,18 @@ export default function Orders() {
                     Total: {total}
                   </Heading>
                   <S.Card>
-                    <p> Card: **** **** **** 4236</p>
-                    <img src="/img/cards/visa.png" alt="visa card" />
+                    {cards?.map((card) => (
+                      <S.CardItem key={card.number}>
+                        <S.CardInfo>
+                          <img src={card.img} alt={card.flag} />
+                          {card.number}
+                        </S.CardInfo>
+                      </S.CardItem>
+                    ))}
                   </S.Card>
                 </S.Section>
                 <Link href="/completed-order" passHref>
-                  <Button as="a" fullWidth>
+                  <Button as="a" fullWidth onClick={clearCart}>
                     Purchase
                   </Button>
                 </Link>

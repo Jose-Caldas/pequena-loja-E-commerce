@@ -3,7 +3,6 @@ import media from "styled-media-query";
 
 export const Grid = styled.div`
   ${({ theme }) => css`
-    height: 70vh;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     grid-gap: ${theme.spacings.medium};
@@ -14,5 +13,9 @@ export const Grid = styled.div`
 
     ${media.lessThan("medium")`
     padding: 0;`}
+
+    ${media.greaterThan("large")`
+    height: 70vh;
+    `}
   `}
 `;

@@ -10,12 +10,11 @@ export type EmptyProps = {
 
 const Empty = ({ title, description, hasLink }: EmptyProps) => (
   <S.Wrapper>
-    <S.Image role="image" src="/img/cart2.png" alt="A cart empty" />
     <S.Title>{title}</S.Title>
     <S.Description>{description}</S.Description>
     {hasLink && (
-      <Link href="/">
-        <Button>Go back to store</Button>
+      <Link href="/products">
+        <Button as="a">Go back to store</Button>
       </Link>
     )}
   </S.Wrapper>
