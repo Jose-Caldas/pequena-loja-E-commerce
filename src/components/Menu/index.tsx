@@ -32,8 +32,9 @@ const Menu = () => {
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
         <S.MenuNav>
           <S.MenuLink href="/">Home</S.MenuLink>
-          <S.MenuLink href="products">Products</S.MenuLink>
-          <S.MenuLink href="cart">Cart</S.MenuLink>
+          <S.MenuLink href="/products">Products</S.MenuLink>
+          <S.MenuLink href="/cart">Cart</S.MenuLink>
+          <S.MenuLink href="/orders">Order</S.MenuLink>
         </S.MenuNav>
       </S.MenuFull>
     </S.Wrapper>

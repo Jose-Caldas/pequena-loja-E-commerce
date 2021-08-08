@@ -3,7 +3,7 @@ import { Container } from "../components/Container";
 import * as S from "../styles/pages/products.styles";
 import ProductCard from "../components/ProductCard";
 import { useQuery } from "@apollo/client";
-import { initializeApollo } from "../utils/aplollo";
+import { initializeApollo } from "../utils/apollo";
 import {
   QueryProducts,
   QueryProductsVariables,

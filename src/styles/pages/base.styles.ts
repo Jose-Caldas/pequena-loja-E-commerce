@@ -13,4 +13,8 @@ export const Wrapper = styled.div`
 export const Section = styled.section`
   background-color: white;
   padding: 2rem;
+
+  ${media.lessThan("medium")`
+  padding: 2rem 0
+  `}
 `;

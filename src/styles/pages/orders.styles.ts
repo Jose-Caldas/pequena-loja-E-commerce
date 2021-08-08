@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
 
     ${media.lessThan("large")`
     grid-template-columns: 1fr;
+    padding: 4.8rem 0;
     `}
   `}
 `;

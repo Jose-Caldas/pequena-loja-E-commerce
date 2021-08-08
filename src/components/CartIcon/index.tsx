@@ -7,7 +7,7 @@ const CartIcon = () => {
 
   return (
     <S.Wrapper>
-      {quantity > 0 && <S.Badge aria-label="Cart Items">{quantity}</S.Badge>}
+      {quantity >= 0 && <S.Badge aria-label="Cart Items">{quantity}</S.Badge>}
       <ShoppingCart aria-label="Shopping Cart" />
     </S.Wrapper>
   );

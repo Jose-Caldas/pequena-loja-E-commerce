@@ -8,7 +8,6 @@ export const Wrapper = styled(Container)`
     grid-template-columns: 2fr 1fr;
     grid-gap: ${theme.grid.gutter};
     margin-top: ${theme.spacings.large};
-
     ${media.lessThan("huge")`
     grid-template-columns: 1fr
     `}

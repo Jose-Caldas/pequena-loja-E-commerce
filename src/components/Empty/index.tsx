@@ -4,7 +4,7 @@ import * as S from "./styles";
 
 export type EmptyProps = {
   title: string;
-  description: string;
+  description?: string;
   hasLink?: boolean;
 };
 

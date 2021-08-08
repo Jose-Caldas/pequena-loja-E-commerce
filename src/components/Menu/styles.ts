@@ -1,14 +1,19 @@
 import styled, { css } from "styled-components";
 import { darken } from "polished";
+import media from "styled-media-query";
 
 export const Wrapper = styled.menu<MenuFullProps>`
   ${({ theme, isOpen }) => css`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: ${theme.spacings.small} 0;
+    padding-top: ${theme.spacings.small};
     position: relative;
     z-index: ${isOpen ? theme.layers.menu : `calc(${theme.layers.menu} - 1)`};
+
+    ${media.lessThan("medium")`
+    padding-left: 2rem
+    `}
   `}
 `;
 
@@ -40,7 +45,10 @@ type MenuFullProps = {
   isOpen: boolean;
 };
 
-export const MenuNav = styled.div``;
+export const MenuNav = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
 
 export const MenuLink = styled.a`
   ${({ theme }) => css`
@@ -49,6 +57,7 @@ export const MenuLink = styled.a`
     margin: 3rem ${theme.spacings.small} 0;
     text-decoration: none;
     text-align: center;
+    padding: none;
     &:hover {
       &::after {
         content: "";

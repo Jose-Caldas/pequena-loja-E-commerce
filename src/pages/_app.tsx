@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import Head from "next/head";
 import { GlobalStyles } from "../styles/globals";
 import theme from "../styles/theme";
-import { useApollo } from "../utils/aplollo";
+import { useApollo } from "../utils/apollo";
 import { CartProvider } from "../hooks/use-cart";
 import NextNprogress from "nextjs-progressbar";
 

@@ -19,8 +19,9 @@ export default function Cart() {
     <Container>
       <Base>
         <Heading lineLeft lineColor="secondary" color="black">
-          Cart
+          My cart
         </Heading>
+
         {items.length ? (
           <S.Wrapper>
             <CartList />
