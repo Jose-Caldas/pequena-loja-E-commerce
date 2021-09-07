@@ -48,7 +48,7 @@ export default function Orders() {
                       ))}
                     </S.Card>
                   </S.Section>
-                  <Link href="/completed-order" passHref>
+                  <Link href="/success" passHref>
                     <Button as="a" fullWidth onClick={clearCart}>
                       Purchase
                     </Button>

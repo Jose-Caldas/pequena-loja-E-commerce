@@ -22,7 +22,7 @@ const ProductCard = ({ name, price, image, slug, id }: ProductCardProps) => (
     </Link>
 
     <S.Content>
-      <Link href={`/game/${slug}`} passHref>
+      <Link href={`/product/${slug}`} passHref>
         <S.Info>
           <S.Title>
             <Heading lineBottom lineColor="secondary" color="black">
